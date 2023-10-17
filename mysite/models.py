@@ -22,7 +22,7 @@ class Product(models.Model):
     name = models.CharField(max_length=50)
     description = models.CharField(max_length=200, null=True)
     price = models.DecimalField(max_digits=20, decimal_places=2, validators=[MinValueValidator(1)])
-    stock_count = models.PositiveIntegerField(validators=[MinValueValidator(1)])
+    stock_count = models.PositiveIntegerField(validators=[MinValueValidator(0)])
     createdby = models.IntegerField()
     updateby = models.IntegerField(null=True,blank=True)
     deletedby = models.IntegerField(null=True,blank=True)
